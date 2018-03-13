@@ -26,7 +26,6 @@ h3, h4 {
 	font-weight: 600;
 }
 h5 {
-	text-transform: uppercase;
 	font-weight: 700;
 	line-height: 20px;
 }
@@ -268,6 +267,7 @@ ul.cat li {
 ol.type li {
 	display: inline-block;
 	margin-left: 20px;
+    margin-bottom: 20px;
 }
 ol.type li a {
 	background: #00bbd3;
@@ -345,6 +345,20 @@ ol.type li a:hover {
 	opacity: 0;
 	transition: all 0.5s;
 }
+
+.hover-text2 {
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.66);
+	padding: 33% 0 0 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+
+
 .hover-bg .hover-text>h4 {
 	opacity: 0;
 	color: #fff;
@@ -379,31 +393,7 @@ ol.type li a:hover {
 	padding: 5px;
 	color: #E87E04;
 }
-/* Achivements Section */
-#achievements {
-	padding: 100px 0;
-	background: #00bbd3;
-}
-#achievements h2 {
-	color: #fff;
-}
-#achievements hr {
-	background: rgba(255,255,255,0.3);
-}
-.achievement-box h4 {
-	color: #fff;
-	font-size: 20px;
-	font-weight: 400;
-	margin-left: 5px;
-}
-.achievement-box span.count {
-	font-size: 52px;
-	font-weight: 600;
-	display: block;
-	color: #121d1f;
-	padding: 0;
-	margin: 0;
-}
+
 /* Resume Section */
 #resume {
 	padding: 100px 0;
@@ -468,9 +458,8 @@ ol.type li a:hover {
 	background: #fff;
 }
 .timeline>li .timeline-image h4 {
-	margin-top: 20px;
-	font-size: 14px;
-	text-transform: uppercase;
+	margin-top: 16px;
+	font-size: 16px;
 }
 .timeline>li.timeline-inverted>.timeline-panel {
 	float: right;
@@ -494,7 +483,6 @@ ol.type li a:hover {
 }
 .timeline .timeline-heading h4 {
 	margin-top: 0;
-	text-transform: uppercase;
 	font-size: 16px;
 }
 .timeline .timeline-heading h2 {
@@ -504,6 +492,12 @@ ol.type li a:hover {
 	text-transform: none;
 	color: #00bbd3;
 	font-size: 20px;
+}
+
+.timeline .timeline-heading h4 .date {
+	text-transform: none;
+	color: #747474;
+	font-size: 14px;
 }
 .timeline .timeline-body>p, .timeline .timeline-body>ul {
 	margin-bottom: 0;
@@ -675,7 +669,7 @@ header .intro-text {
 	float: left;
 	width: 41%;
 	padding: 0 20px 20px 30px;
-	text-align: right;
+	text-align: left;
 }
 .timeline>li .timeline-image {
 	left: 50%;
@@ -684,7 +678,7 @@ header .intro-text {
 	margin-left: -50px;
 }
 .timeline>li .timeline-image h4 {
-	margin-top: 16px;
+	margin-top: 20px;
 	line-height: 18px;
 	font-weight: 400;
 }
@@ -711,7 +705,7 @@ header .intro-text {
 	margin-left: -75px;
 }
 .timeline>li .timeline-image h4 {
-	margin-top: 30px;
+	margin-top: 35px;
 	font-size: 18px;
 	line-height: 26px;
 }
@@ -733,7 +727,7 @@ header .intro-text {
 	margin-left: -75px;
 }
 .timeline>li .timeline-image h4 {
-	margin-top: 40px;
+	margin-top: 50px;
 	font-weight: 400;
 }
 .timeline>li.timeline-inverted>.timeline-panel {
@@ -764,7 +758,7 @@ header .intro-text {
 }
 
 #scrollUp:before {
-    background: #00bbd3;
+    background: #747474;
     font-family: "fontawesome";
     font-size: 2.4em;
     font-style: normal;
@@ -774,7 +768,7 @@ header .intro-text {
     width: 45px;
     height: 45px;
     display: inline-block;
-    line-height: 45px;
+    line-height: 40px;
     content: "\f106";
     opacity: 1;
     border-radius: 25px;
