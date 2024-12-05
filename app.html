@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>KY Portfolio</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body class="top-fixed">
+    <header class="ae-container-fluid ae-container-fluid--full header ">
+      <input type="checkbox" id="mobile-menu" class="mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid topbar">
+        <h1 class="logo"><a href="index.html">KY portfolio</a></h1>
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="index.html" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item"><a href="index.html" class="menu__link">Portfolio</a>
+            </li>
+            <li class="menu__item"><a href="about.html" class="menu__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    
+    <section class="ae-container-fluid ae-container-fluid--full main">
+      <header class="portfolio-cover  post-inside-2">
+        <div class="item-inside__meta ">
+          <h1 class="ae-u-bolder portfolio-title">*APP</a>
+            </h1>
+          <p class="ae-theta portfolio-category ">APP Design</p>
+        </div>
+      </header>
+      <div class="ae-container-fluid ae-container-fluid--inner">
+        <div class="ae-grid ae-grid">
+          <div class="ae-grid__item item-lg-10 item-lg--offset-1">
+            <h3 id="portfolio-items"></h3>
+            <h5 id="static-items">背景</h5>
+            <p>通訊類型app，公司以客服系統以基礎，使用app取代傳統桌機，
+              以新型態的方式成為企業內部使用的電話系統。</p>
+            <img src="assets/img/im/im-diagram.png">
+          </div>
+	        <div class="ae-grid__item item-lg-8 item-lg--offset-1">
+    				<h5 class="au-xs-ptp-1" >功能</h5>
+            <p>訊息聊天、依部門提供對應通訊錄、VOIP電話、簡報、錄音、會議</p>
+    				<img src="assets/img/app/feature-list.png">
+          </div>
+          <div class="ae-grid__item item-lg-10 item-lg--offset-1">
+            <h5 class="au-xs-ptp-1">負責工作</h5>
+              <ul>
+                <li>介面及Flow設計</li>
+                <li>參與操作流程及線框稿討論</li>
+                <li>製作畫面流程圖及操作原型</li>
+              </ul>
+            <h5 class="au-xs-ptp-1">困難點</h5>
+              <ul>
+                <li>一項功能須考量到背後複雜的系統架構 app/im/pbx…/資料結構</li>
+                <li>團隊無法理解的操作，操作原型</li>
+                <li>考量的角度：使用者及企業</li>
+                <li>各種狀態設計：空狀態、等待、極限狀態</li>
+              </ul>
+              <img src="assets/img/app/login.png">   
+          </div>
+        </div>  	
+        <div class="ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+          </div>
+        </div>
+        <div class="ae-grid ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-12">
+            <h5 id="flexible-items">重新定義設計系統</h3>
+            <p>重新整理重複及使用的元件，整合設計系統，以求統一性。</p>	
+          </div>
+        </div>
+        <div class="portfolio__items">
+        	<a class="item-app-2 item item--flex"></a>
+        	<a class="item-app-3 item item--flex"></a>
+        </div>
+        <div class="ae-grid ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-12">
+            <h5 id="flow">其他畫面</h5>
+            <img src="assets/img/app/recordlist-emptystatus.png">
+            <img src="assets/img/app/status.png">
+
+          </div>
+        </div>        
+      </div>
+    </section>
+    <section class="ae-container-fluid au-pt-4 au-pb-4">
+      <div class="group-buttons au-mt-2"><a href="scad.html" class="arrow-button arrow-button--reverse">Prev
+          <div class="arrow-cont arrow-cont-rev">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg>
+          </div></a><a href="im.html" class="arrow-button">Next<span class="arrow-cont">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg></span></a></div>
+    </section>
+    <footer class="footerPage"></footer>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      $(".footerPage").load("include/footer.html");
+    </script>
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/pe-navscroll.min.js"></script>
+    <script>
+      /// navScroll init
+      peNavScroll.init({
+        nav:'.navigation',
+        class:'active',
+        duration: 500,
+        hashChange: true,
+        offset: 50,
+        allLinks: true,
+        easingFunction: easing.easeInOutCubic
+      });
+      
+      //- Select Code
+      var pres = document.querySelectorAll('pre');
+      [].slice.call(pres).forEach(function(elem, index){
+        pres[index].addEventListener('click', function(){
+          SelectText(this)
+        })
+      })
+    </script>
+  </body>
+</html>

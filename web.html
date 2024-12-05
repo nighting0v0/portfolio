@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>KY Portfolio</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      .layout-ctrl-input:checked + .demo-switch {
+        color: #a0a0a0;
+      }
+      .demo-switch {
+        cursor: pointer;
+        display: none;
+        height: 32px;
+        transition: color .3s;
+        width: 28px;
+      }
+      .demo-switch:hover {
+        color: #a0a0a0;
+      }
+      .demo-switch svg {
+        height: 100%;
+        width: 100%;
+      }
+      
+      @media (min-width: 40em) {
+        .demo-switch {
+          display: inline-block !important;
+        }
+      }
+      
+    </style>
+  </head>
+
+  <body class="top-fixed">
+    <header class="ae-container-fluid ae-container-fluid--full header ">
+      <input type="checkbox" id="mobile-menu" class="mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid topbar">
+        <h1 class="logo"><a href="index.html">KY portfolio</a></h1>
+        <nav class="navigation">
+          <ul class="menu">
+            
+            <li class="menu__item"><a href="index.html" class="menu__link">Home</a>
+            </li>
+            <li class="active menu__item"><a href="index.html" class="menu__link">Portfolio</a>
+            </li>
+            <li class="menu__item"><a href="about.html" class="menu__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <section class="ae-container-fluid ae-container-fluid--full main">
+      <div class="item-inside__meta">
+        <h1 class="ae-u-bolder portfolio-title ">Web</h1>
+      </div>
+      <div class="ae-container-fluid ae-container-fluid--inner">
+        <div class="ae-grid ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-12">
+            <h3 id="portfolio-items">企業網站</h3>
+            <img src="assets/img/project-13.jpg" alt="">
+            <p><a href="http://www.starise.info" target="_blank">www.starise.info</a></p>
+          </div>
+        </div>
+        <div class="ae-grid ae-grid au-xs-ptp-1">
+	        <div class="ae-grid__item item-lg-12">
+				<h5 id="flow">網站架構</h5>
+				<img src="assets/img/web-flow.png">
+			</div>
+		</div>	
+        
+        <div class="ae-grid">
+          <div class="ae-grid__item item-lg-12">
+            <h5 id="advanced-layouts">負責工作</h5>
+            	<ul>
+            		<li>網頁設計</li>
+            		<li>切版及RWD</li>
+            	</ul>
+            <h5 id="size" class="ae-u-bolder">困難點</h5>
+            	<ul>
+            		<li>行銷無法提供組織化、整理好的資料</li>
+            	</ul>		
+          </div>
+        </div>
+        
+        
+
+ 
+
+        <div class="ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+            <div class="group-buttons">
+            	<a href="app.html" class="arrow-button arrow-button--reverse arrow-button--center">Pre Project
+	                <div class="arrow-cont arrow-cont-rev">
+	                  <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg>
+	                </div>
+	            </a>
+	            <a href="web-reseller.html" class="arrow-button arrow-button--center">Next Project
+	                <div class="arrow-cont">
+	                  <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg>
+	                </div>
+	            </a>
+	        </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <footer class="ae-container-fluid footer ">
+      <div class="ae-grid ae-grid--collapse">
+          <p class="footer__text footer__copy ">
+            <span class="ae-u-bold">© </span>2019 KY PORTFOLIO All Right Reserved.
+          </p>
+      </div>
+    </footer>
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/pe-navscroll.min.js"></script>
+    <script>
+      /// navScroll init
+      peNavScroll.init({
+        nav:'.navigation',
+        class:'active',
+        duration: 500,
+        hashChange: true,
+        offset: 50,
+        allLinks: true,
+        easingFunction: easing.easeInOutCubic
+      });
+      
+      //- Select Code
+      var pres = document.querySelectorAll('pre');
+      [].slice.call(pres).forEach(function(elem, index){
+        pres[index].addEventListener('click', function(){
+          SelectText(this)
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>KY Portfolio</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="top-fixed">
+
+    <header class="ae-container-fluid ae-container-fluid--full header ">
+      <input type="checkbox" id="mobile-menu" class="mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid topbar">
+        <h1 class="logo"><a href="index.html">KY portfolio</a></h1>
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="index.html" class="menu__link">Portfolio</a>
+            </li>
+            <li class="active menu__item"><a href="portfolio.html" class="menu__link">Portfolio</a>
+            </li>
+            <li class="menu__item"><a href="about.html" class="menu__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    
+    <section class="ae-container-fluid ae-container-fluid--full main">
+      <header class="portfolio-cover  post-inside-starise">
+        <div class="item-inside__meta ">
+          <h1 class="ae-u-bolder portfolio-title">STARISE</a>
+            </h1>
+          <p class="ae-theta portfolio-category ">Brand</p>
+        </div>
+      </header>
+      
+      <div class="ae-container-fluid ae-container-fluid--inner">
+        <div class="ae-grid ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-12">
+            <h2 id="portfolio-items" class="">Logo</h2>
+            <h5 id="static-items" class="ae-u-bolder">STARISE=STAR+RISE</h5 >
+            <p>來自電話的<span class="au-underline">*</span>符號鍵及中國字<span class="au-underline">米</span></s>為聯想，象徵豐收，意含承接了母公司翱騰在Call Center多年累積的使用者經驗及成就，思達以其為碁石，加以發展，收成其成果。</p>
+              <div class="ae-grid">
+              <div class="ae-grid__item item-lg-4"><img src="assets/img/logo-01.png" alt=""></div>
+              <div class="ae-grid__item item-lg-4"><img src="assets/img/inner-1.jpg" alt=""></div>
+              <div class="ae-grid__item item-lg-4"><img src="assets/img/logo-06.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+        <div class="ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-12">
+            <h5 id="aspect-ratio" class="ae-u-bolder">Web | Visual</h5>
+            <p>以簡潔俐落為主要的設計風格，以象徵活潑智慧的橘#39800為主識別色，灰色為輔，希望帶給我們以是為使用者去蕪存菁的設計及服務感受。</p>
+            <div class="portfolio__items">
+              <div class="item item--flex item-16 size-3"></div>
+              <div class="item item--flex item-1 size-9 landscape"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ae-grid au-xs-ptp-1">
+          <div class="ae-grid__item item-lg-12">
+            <h5 id="smart-item-containers" class="ae-u-bolder">Graphic Design</h5>
+            <p>不論是相關的邀請卡、認證手冊封面至產品介紹等，延續一致風格。</p>
+            <div class="portfolio__items">
+              <div class="items-cont size-6">
+                <div class="item item--flex item-17 landscape"></div>
+                <div class="item item--flex item-8 landscape"></div>
+              </div>
+              <div class="items-cont size-6">
+                <div class="item item--flex item-18 landscape"></div>
+                <div class="item item--flex item-11 landscape"></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>  
+    </section>
+    <section class="ae-container-fluid au-pt-4 au-pb-4">
+      <div class="group-buttons au-mt-2"><a href="app.html" class="arrow-button arrow-button--reverse">Prev 
+          <div class="arrow-cont arrow-cont-rev">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg>
+          </div></a><a href="im.html" class="arrow-button">Next<span class="arrow-cont">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg></span></a></div>
+    </section>
+    
+    <footer class="footerPage"></footer>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      $(".footerPage").load("include/footer.html");
+    </script>
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/pe-navscroll.min.js"></script>
+    <script>
+      /// navScroll init
+      peNavScroll.init({
+        nav:'.navigation',
+        class:'active',
+        duration: 500,
+        hashChange: true,
+        offset: 50,
+        allLinks: true,
+        easingFunction: easing.easeInOutCubic
+      });
+      
+      //- Select Code
+      var pres = document.querySelectorAll('pre');
+      [].slice.call(pres).forEach(function(elem, index){
+        pres[index].addEventListener('click', function(){
+          SelectText(this)
+        })
+      })
+    </script>
+  </body>
+</html>

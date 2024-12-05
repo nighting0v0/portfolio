@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>KY Portfolio</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      .layout-ctrl-input:checked + .demo-switch {color: #a0a0a0;}
+      .demo-switch {
+        cursor: pointer;
+        display: none;
+        height: 32px;
+        transition: color .3s;
+        width: 28px;
+      }
+      .demo-switch:hover {color: #a0a0a0;}
+      .demo-switch svg {height: 100%;width: 100%;}
+      
+      @media (min-width: 40em) {.demo-switch {display: inline-block !important;}}
+      
+    </style>
+  </head>
+
+<body class="top-fixed">
+  <header class="ae-container-fluid ae-container-fluid--full header ">
+    <input type="checkbox" id="mobile-menu" class="mobile-menu">
+    <label for="mobile-menu">
+      <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
+      <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
+      <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
+    </label>
+    <div class="ae-container-fluid topbar">
+      <h1 class="logo"><a href="index.html">KY portfolio</a></h1>
+      <nav class="navigation">
+        <ul class="menu">
+          <li class="menu__item"><a href="index.html" class="menu__link">Home</a>
+          </li>
+          <li class="menu__item"><a href="index.html" class="menu__link">Portfolio</a></li>
+          
+          <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="ae-container-fluid ae-container-fluid--full main">
+    <div class="item-inside__meta"><h1 class="ae-u-bolder portfolio-title ">iManager</h1></div>
+    <div class="ae-container-fluid ae-container-fluid--inner">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg--auto"><img src="assets/img/project-9-1.jpg"></div>
+      </div>
+      
+      <div class="ae-grid au-xs-ptp-1">
+        <div class="ae-grid__item item-lg-12">
+          <h3 id="portfolio-items">iManager | User Interface</h3>
+        </div>
+        
+        <div class="ae-grid__item item-lg-10 ">
+          <h5 class="ae-u-bolder au-mt-2">背景</h5>
+          <p>網路交換機(iSwtich)的後台設定及管理系統介面(iManger)，主要處理客服(Call Center)系統的建置服務。來往客戶以銀行業及大型行銷類為主。</p>
+        </div>
+          <img src="assets/img/im/im-diagram.png">
+        <div class="ae-grid__item item-lg-12">
+          <h5 id="flow">流程</h5>
+          <img src="assets/img/im/im-design-flow.png">
+          <h5 id="masonry-items">目的</h5>
+          <p>改善原工程化的介面、簡化及便於操作，加深品牌印象</p>
+          <div class="ae-grid">
+            <div class="ae-grid__item item-lg-4"><img src="assets/img/ic-01.png" alt=""></div>
+            <div class="ae-grid__item item-lg-4"><img src="assets/img/ic-02.png"></div>
+            <div class="ae-grid__item item-lg-4"><img src="assets/img/ic-03.png" alt=""></div>
+            <div class="ae-grid__item item-lg-4"><img src="assets/img/im/im-01.png" alt=""></div>
+            <div class="ae-grid__item item-lg-4"><img src="assets/img/im/im-03.png"></div>
+            <div class="ae-grid__item item-lg-4"><img src="assets/img/im/im-04.png" alt=""></div>
+          </div>
+          <h5 id="flexible-items">設計系統</h3>
+          <p>定義重複及使用的元素，整合設計系統，以求統一性。</p>	
+          <pre>產品架構
+            -- Main pages (notification、navigation)
+            -- System
+            -- Number
+            -- Telephony
+            -- AA Configuration
+            -- User Configuration
+            -- Additional Feature Management
+            -- Operational and Maintenance
+            -- Report</pre>
+          <h5 id="advanced-layouts">負責工作</h5>
+            <ul>
+              <li>定義設計系統：風格、介面元素、互動元素</li>
+              <li>參與操作流程及線框稿討論</li>
+              <li>製作畫面流程圖及操作原型</li>
+            </ul>
+          <h5 id="size" class="ae-u-bolder">困難點</h5>
+            <ul>
+              <li>複雜的設定功能，不斷質疑及考慮整合的可能性</li>
+              <li>簡化操作 提出拖移去變更階層及順序</li>
+              <li>團隊無法理解的操作，操作原型</li>
+            </ul>		
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ae-container-fluid au-pt-4 au-pb-4">
+    <div class="group-buttons au-mt-2">
+      <a href="starise.html" class="arrow-button arrow-button--reverse">Prev
+        <div class="arrow-cont arrow-cont-rev">
+          <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg>
+        </div>
+      </a>
+      <a href="custom.html" class="arrow-button">Next<span class="arrow-cont">
+          <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg>
+        </span></a>
+      </div>
+  </section>
+  <footer class="footerPage"></footer>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      $(".footerPage").load("include/footer.html");
+    </script>
+  <script src="assets/js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script src="assets/js/main.min.js"></script>
+  <script src="assets/js/pe-navscroll.min.js"></script>
+  <script>
+    /// navScroll init
+    peNavScroll.init({
+      nav:'.navigation',
+      class:'active',
+      duration: 500,
+      hashChange: true,
+      offset: 50,
+      allLinks: true,
+      easingFunction: easing.easeInOutCubic
+    });
+    
+    //- Select Code
+    var pres = document.querySelectorAll('pre');
+    [].slice.call(pres).forEach(function(elem, index){
+      pres[index].addEventListener('click', function(){
+        SelectText(this)
+      })
+    })
+  </script>
+</body>
+</html>

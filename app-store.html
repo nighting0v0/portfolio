@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>KY Portfolio</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body class="top-fixed">
+    <header class="ae-container-fluid ae-container-fluid--full header ">
+      <input type="checkbox" id="mobile-menu" class="mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid topbar">
+        <h1 class="logo"><a href="index.html">KY portfolio</a></h1>
+        <nav class="navigation">
+          <ul class="menu">
+            <li class="menu__item"><a href="index.html" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item active"><a href="index.html" class="menu__link">Portfolio</a>
+            </li>
+            <li class="menu__item"><a href="about.html" class="menu__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    
+    <section class="ae-container-fluid ae-container-fluid--full main">
+      <header class="portfolio-cover  post-inside-store">
+        <div class="item-inside__meta ">
+          <h1 class="ae-u-bolder portfolio-title">門市APP</a>
+            </h1>
+          <p class="ae-theta portfolio-category ">APP Design</p>
+        </div>
+      </header>
+      <div class="ae-container-fluid ae-container-fluid--inner">
+        <div class="ae-grid">
+          <div class="ae-grid__item item-lg-10 item-lg--offset-2">
+            <h4 class="au-xs-ptp-1">背景</h4>
+            <p>訊電是大同3c門市，全門市的作業不論是結帳、查價、工作通知等都需使用整合性後台統一操作；若電腦在結帳時，就無法同步處理其他的工作。
+              為提升工作效率及應用，與站長討論列出較常頻繁使用的工作項目，作為此APP的主要功能。
+              門市人員皆可使用手機進行產品查價、查詢庫存、問題及陳列回報…等功能。
+            </p>
+          </div>
+	        <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+    				<h4>功能</h4>
+            <p>商品查價、庫存查詢、即時通報、物流狀態、外出定位打卡、維修查詢</p>
+            <img src="assets/img/store/store-ia.png">
+          </div>
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+            <h4 >負責工作</h4>
+              <ul>
+                <li>介面及Flow設計</li>
+                <li>參與操作流程及線框稿討論</li>
+                <li>製作畫面流程圖及操作原型</li>
+              </ul>
+            
+              
+          </div>
+        </div>  	
+        <div class="ae-grid">
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+            <h4 class="au-xs-ptp-1">Wireframe</h4>
+            <img src="assets/img/store/store-wireframe.png">
+          </div>
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+            <h4 class="au-xs-ptp-1">視覺設計</h4>
+          </div>
+          <div class="ae-grid__item item-lg-6 item-lg--offset-2">
+            <img src="assets/img/store/store.png">
+          </div>
+          <div class="ae-grid__item item-lg-2">
+            <img src="assets/img/store/store-1.png">
+          </div>
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+            <h4 class="au-xs-ptp-1">專案困難點</h4>
+              <ul >
+                <li>專案時間的壓縮，功能變成以分階段進行，並非優先選擇門市優先需求功能。</li>
+                <li>為縮短整體實程，不進行易用性測試，但部份功能還是需觀察使用者實際操作作驗證<br>
+                改為直接到直營門市尋求站長協助。</li>
+              </ul>
+          </div>
+        </div>
+             
+      </div>
+    </section>
+    <section class="ae-container-fluid au-pt-4 au-pb-4">
+      <div class="group-buttons au-mt-2"><a href="solar-1.html" class="arrow-button arrow-button--reverse">Prev
+          <div class="arrow-cont arrow-cont-rev">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg>
+          </div></a><a href="web-reseller.html" class="arrow-button">Next<span class="arrow-cont">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg></span></a></div>
+    </section>
+    <footer class="footerPage"></footer>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      $(".footerPage").load("include/footer.html");
+    </script>
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/pe-navscroll.min.js"></script>
+    <script>
+      /// navScroll init
+      peNavScroll.init({
+        nav:'.navigation',
+        class:'active',
+        duration: 500,
+        hashChange: true,
+        offset: 50,
+        allLinks: true,
+        easingFunction: easing.easeInOutCubic
+      });
+      
+      //- Select Code
+      var pres = document.querySelectorAll('pre');
+      [].slice.call(pres).forEach(function(elem, index){
+        pres[index].addEventListener('click', function(){
+          SelectText(this)
+        })
+      })
+    </script>
+  </body>
+</html>
