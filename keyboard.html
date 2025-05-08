@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Keyboard</title>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>全螢幕鍵盤</title>
+  <link rel="manifest" href="manifest.json" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
@@ -13,21 +17,22 @@
       background: #f2f2f2;
       padding-top: 120px;
       padding-bottom: 260px;
+      height: 100vh;
+      overflow: hidden;
     }
-    textarea {
+    #textInput {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      width: 100%;
       height: 120px;
       font-size: 20px;
       padding: 15px;
       border: none;
       border-bottom: 1px solid #ccc;
-      outline: none;
       background: white;
       z-index: 1000;
+      overflow-y: auto;
     }
     .keyboard {
       position: fixed;
@@ -98,7 +103,7 @@
 </head>
 <body>
 
-  <textarea id="textInput" placeholder="請輸入或使用鍵盤..."></textarea>
+  <div id="textInput" contenteditable="true">點此輸入...</div>
 
   <div class="keyboard">
     <div class="row">
@@ -131,7 +136,6 @@
       ['A','S','D','F','G','H','J','K','L'],
       ['⇧','Z','X','C','V','B','N','M','⌫']
     ];
-
     const SYMBOLS = () => [
       ['1','2','3','4','5','6','7','8','9','0'],
       ['@','#','$','&','*','(',')','-','+'],
@@ -146,22 +150,15 @@
       renderLayout.forEach((row, index) => {
         const rowDiv = document.createElement('div');
         rowDiv.className = 'row';
-
-        if (index === 1) {
-          rowDiv.appendChild(document.createElement('div')).className = 'half-space';
-        }
+        if (index === 1) rowDiv.appendChild(document.createElement('div')).className = 'half-space';
 
         row.forEach(char => {
           const key = document.createElement('div');
           key.className = 'key';
-
           if (char === '⇧') {
             key.classList.add('action');
             key.innerHTML = '<span class="material-symbols-outlined">arrow_upward</span>';
-            key.addEventListener('click', () => {
-              isUpper = !isUpper;
-              renderKeyboard();
-            });
+            key.addEventListener('click', () => { isUpper = !isUpper; renderKeyboard(); });
           } else if (char === '⌫') {
             key.classList.add('action', 'gray');
             key.textContent = '⌫';
@@ -169,59 +166,45 @@
           } else if (char === 'ABC') {
             key.classList.add('action', 'gray');
             key.textContent = 'ABC';
-            key.addEventListener('click', () => {
-              isSymbols = false;
-              renderKeyboard();
-            });
+            key.addEventListener('click', () => { isSymbols = false; renderKeyboard(); });
           } else {
             key.textContent = isSymbols ? char : (isUpper ? char.toUpperCase() : char.toLowerCase());
             key.addEventListener('click', () => insertAtCursor(key.textContent));
           }
-
           rowDiv.appendChild(key);
         });
 
-        if (index === 1) {
-          rowDiv.appendChild(document.createElement('div')).className = 'half-space';
-        }
-
+        if (index === 1) rowDiv.appendChild(document.createElement('div')).className = 'half-space';
         keyboardRows.appendChild(rowDiv);
       });
     }
 
     function insertAtCursor(text) {
-      const start = textInput.selectionStart;
-      const end = textInput.selectionEnd;
-      const before = textInput.value.substring(0, start);
-      const after = textInput.value.substring(end);
-      textInput.value = before + text + after;
-      textInput.selectionStart = textInput.selectionEnd = start + text.length;
+      const sel = window.getSelection();
+      const range = sel.getRangeAt(0);
+      range.deleteContents();
+      range.insertNode(document.createTextNode(text));
+      sel.collapseToEnd();
       textInput.focus();
     }
 
     function handleDelete() {
-      const start = textInput.selectionStart;
-      const end = textInput.selectionEnd;
-      if (start === end && start > 0) {
-        textInput.value = textInput.value.substring(0, start - 1) + textInput.value.substring(end);
-        textInput.selectionStart = textInput.selectionEnd = start - 1;
-      } else if (start !== end) {
-        textInput.value = textInput.value.substring(0, start) + textInput.value.substring(end);
-        textInput.selectionStart = textInput.selectionEnd = start;
+      const sel = window.getSelection();
+      if (!sel.rangeCount) return;
+      const range = sel.getRangeAt(0);
+      if (!range.collapsed) {
+        range.deleteContents();
+      } else {
+        range.setStart(range.startContainer, Math.max(0, range.startOffset - 1));
+        range.deleteContents();
       }
       textInput.focus();
     }
 
     spaceBtn.addEventListener('click', () => insertAtCursor(' '));
-    confirmBtn.addEventListener('click', () => alert("你輸入的內容是：\\n" + textInput.value));
-    toggleSymbolsBtn.addEventListener('click', () => {
-      isSymbols = !isSymbols;
-      renderKeyboard();
-    });
-    flipKey.addEventListener('click', () => {
-      isFlipped = !isFlipped;
-      renderKeyboard();
-    });
+    confirmBtn.addEventListener('click', () => alert("你輸入的內容：\n" + textInput.innerText.trim()));
+    toggleSymbolsBtn.addEventListener('click', () => { isSymbols = !isSymbols; renderKeyboard(); });
+    flipKey.addEventListener('click', () => { isFlipped = !isFlipped; renderKeyboard(); });
 
     renderKeyboard();
   </script>
