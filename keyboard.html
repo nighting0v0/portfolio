@@ -8,6 +8,21 @@
   <style>
     * { box-sizing: border-box; }
     body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#document-section {
+  flex: 1;
+  overflow-y: auto;
+}
+
+#keyboard {
+  flex-shrink: 0;
+}
+
+    body {
       margin: 0;
       font-family: system-ui, sans-serif;
       background: #f2f2f2;
@@ -16,6 +31,36 @@
       height: 100vh;
       overflow: hidden;
     }
+    #document-section {
+  background-color: #f0f0f0;
+  padding: 16px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  font-family: sans-serif;
+}
+
+#document-section h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#document-section ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+#document-section li {
+  margin-bottom: 12px;
+}
+
+#document-section input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
     textarea {
       position: fixed;
       top: 0;
@@ -101,6 +146,29 @@
 
   <textarea id="textInput" readonly placeholder="請使用下方鍵盤輸入..."></textarea>
 
+<div id="document-section">
+  <h2>正式測驗</h2>
+  <ol>
+    <li>
+      晚一點再幫你補充
+      <input type="text" placeholder="請輸入文字">
+    </li>
+    <li>
+      喂喂感覺不錯
+      <input type="text" placeholder="請輸入文字">
+    </li>
+    <li>
+      有時間再一起討論那個提案
+      <input type="text" placeholder="請輸入文字">
+    </li>
+    <li>
+      哈哈哈哈哈哈
+      <input type="text" placeholder="請輸入文字">
+    </li>
+  </ol>
+</div>
+
+  
   <div class="keyboard">
     <div class="row">
       <div class="key action gray" id="flipKey">↔</div>
